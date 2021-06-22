@@ -10,3 +10,14 @@ puts "Exercise 7"
 puts "----------"
 
 # Your code goes here ...
+becca = @store2.employees.create(first_name: "becca", last_name: "W", hourly_rate: 2)
+print "New store name: "
+new_store = gets.chomp
+
+@store7 = Store.create(name: new_store)
+
+@store7.errors.messages.each do |key, array|
+  puts "ERROR"
+  print "  #{key} ----- "
+  puts array
+end
